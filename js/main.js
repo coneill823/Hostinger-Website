@@ -37,16 +37,24 @@
     if (e.key === "Escape") closeDrawer();
   });
 
-  // Highlight the current page in the drawer
+  // Highlight the current page in the drawer.
+  // Detail pages live in sub-folders; map each folder to its section page.
   if (drawer) {
-    var path = location.pathname.replace(/\/+$/, "");
-    var file = path.substring(path.lastIndexOf("/") + 1) || "index.html";
-    var inPosts = /\/posts\//.test(location.pathname);
+    var parts = location.pathname.replace(/\/+$/, "").split("/");
+    var file = parts[parts.length - 1] || "index.html";
+    var folder = parts.length > 1 ? parts[parts.length - 2] : "";
+    var folderSection = {
+      posts: "blog.html",
+      projects: "projects.html",
+      books: "reading.html",
+      papers: "reading.html"
+    };
+    var active = folderSection[folder] || file;
     var links = drawer.querySelectorAll(".drawer-list a");
     for (var i = 0; i < links.length; i++) {
       var href = links[i].getAttribute("href") || "";
       var target = href.substring(href.lastIndexOf("/") + 1);
-      if (target === file || (inPosts && target === "blog.html")) {
+      if (target === active) {
         links[i].classList.add("is-active");
         links[i].setAttribute("aria-current", "page");
       }

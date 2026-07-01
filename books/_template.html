@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- EDIT: title + description for this post -->
-  <title>Post title — Cameron O'Neill</title>
-  <meta name="description" content="Short description of this post." />
+  <title>Book title — Cameron O'Neill</title>
+  <meta name="description" content="A book recommendation." />
   <link rel="icon" href="../assets/logo.png" />
   <link rel="stylesheet" href="../css/styles.css?v=3" />
 </head>
@@ -46,28 +45,42 @@
   <main id="main">
     <section class="page-hero">
       <div class="container narrow">
-        <p class="page-index mono"><a class="backlink" href="../blog.html">← Blog</a></p>
-        <!-- EDIT: post title + date -->
-        <h1 class="page-title">Post title</h1>
-        <p class="post-meta mono">2026-01-01</p>
+        <p class="page-index mono"><a class="backlink" href="../reading.html">← Reading</a></p>
+        <h1 class="page-title">Book title</h1>
+        <p class="post-meta mono">Author · Year</p>
       </div>
     </section>
 
     <section class="section">
       <article class="container narrow post prose">
-        <!-- EDIT: write your post below. Examples of what you can use: -->
-        <p>Opening paragraph. Write in plain HTML paragraphs like this.</p>
+        <!-- ============================================================
+             IMAGE PLACEMENT — put image files in assets/ (e.g. assets/projects/)
+             and reference them with a ../ path. Copy any of these:
 
-        <h2>A subheading</h2>
-        <p>More text. To add an image, drop the file in <code>assets/blog/</code>
-          and reference it with a <code>../</code> path, like the figure below.</p>
+             Full width (default):
+             <figure>
+               <img src="../assets/your-image.jpg" alt="describe it">
+               <figcaption>Optional caption.</figcaption>
+             </figure>
 
-        <figure>
-          <img src="../assets/blog/your-image.jpg" alt="Describe the image" />
-          <figcaption>A caption for the image.</figcaption>
-        </figure>
+             Centered, natural size:   <figure class="center"> ... </figure>
+             Small, centered:          <figure class="small"> ... </figure>
+             Float right (text wraps): <figure class="right"> ... </figure>
+             Float left  (text wraps): <figure class="left"> ... </figure>
+             After a float, if the next block overlaps: <p class="clear"></p>
 
-        <p>Closing thoughts.</p>
+             Two side by side:
+             <div class="img-row">
+               <figure><img src="../assets/a.jpg" alt=""></figure>
+               <figure><img src="../assets/b.jpg" alt=""></figure>
+             </div>
+        ============================================================ -->
+        <p>A paragraph on what this is and why you recommend it.</p>
+
+        <h2>Why it's worth your time</h2>
+        <p>Your take — what stuck with you.</p>
+
+        <p><a href="https://example.com" rel="noopener">View source →</a></p>
       </article>
     </section>
   </main>
@@ -75,7 +88,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© <span id="year"></span> Cameron O'Neill</p>
-      <a href="../blog.html">Back to blog ↑</a>
+      <a href="../reading.html">Back ↑</a>
     </div>
   </footer>
   <script src="../js/main.js?v=3"></script>
