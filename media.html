@@ -12,30 +12,35 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <div class="brandbar">
-      <div class="container brandbar-inner">
-        <a class="brand" href="index.html" aria-label="Home">
-          <img class="brand-logo" src="assets/logo.png" alt="" />
-          <span class="brand-name">Cameron&nbsp;O'Neill</span>
-        </a>
-        <span class="brand-tag mono">thecamerononeill.com</span>
-      </div>
-    </div>
-    <nav class="mainnav" aria-label="Primary">
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
-        <span>Menu</span>
+    <div class="container brandbar-inner">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
         <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
       </button>
-      <ul id="nav-menu" class="nav-grid">
-        <li><a href="about.html">About&nbsp;Me</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="projects.html">Personal&nbsp;Projects</a></li>
-        <li><a href="reading.html">Reading&nbsp;Recommendations</a></li>
-        <li><a href="media.html" class="is-active" aria-current="page">Podcasting&nbsp;and&nbsp;Video&nbsp;Content</a></li>
-        <li><a href="contact.html">Contact&nbsp;Me</a></li>
-      </ul>
-    </nav>
+      <a class="brand" href="index.html" aria-label="Home">
+        <img class="brand-logo" src="assets/logo.png" alt="" />
+        <span class="brand-name">Cameron&nbsp;O'Neill</span>
+      </a>
+      <span class="brand-tag mono">thecamerononeill.com</span>
+    </div>
   </header>
+
+  <div class="drawer-backdrop"></div>
+  <nav id="drawer" class="drawer" aria-label="Primary" aria-hidden="true">
+    <div class="drawer-head">
+      <span class="drawer-title mono">Menu</span>
+      <button class="drawer-close" type="button" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="projects.html">Personal Projects</a></li>
+      <li><a href="reading.html">Reading Recommendations</a></li>
+      <li><a href="media.html">Podcasting and Video Content</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
+    <div class="drawer-foot mono">thecamerononeill.com</div>
+  </nav>
 
   <main id="main">
     <section class="page-hero">
