@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me — Cameron O'Neill</title>
+  <meta name="description" content="About Cameron O'Neill." />
+  <link rel="icon" href="assets/logo.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brandbar">
+      <div class="container brandbar-inner">
+        <a class="brand" href="index.html" aria-label="Home">
+          <img class="brand-logo" src="assets/logo.svg" alt="" />
+          <span class="brand-name">Cameron&nbsp;O'Neill</span>
+        </a>
+        <span class="brand-tag mono">thecamerononeill.com</span>
+      </div>
+    </div>
+    <nav class="mainnav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span>Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+      </button>
+      <ul id="nav-menu" class="nav-grid">
+        <li><a href="about.html" class="is-active" aria-current="page">About&nbsp;Me</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="projects.html">Personal&nbsp;Projects</a></li>
+        <li><a href="reading.html">Reading&nbsp;Recommendations</a></li>
+        <li><a href="media.html">Podcasting&nbsp;and&nbsp;Video&nbsp;Content</a></li>
+        <li><a href="contact.html">Contact&nbsp;Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-index mono">01 / ABOUT ME</p>
+        <h1 class="page-title">About Me</h1>
+        <p class="page-lead">A short introduction — who you are and what you're about.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container prose">
+        <!-- EDIT ME: replace with your real bio. -->
+        <p>Hi, I'm Cameron. [ Write a couple of sentences about your background,
+          what you do, and what you care about. Keep it human and specific. ]</p>
+        <p class="lead-muted">[ A second paragraph for a bit more detail — where
+          you're based, what you're currently focused on, or where you've worked
+          and studied. ]</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="idx mono">//</span>
+          <h2 class="section-title">Currently</h2>
+        </div>
+        <ul class="numbered">
+          <li><span class="n">01</span><div><h3>[ Current focus ]</h3><span class="by">What you're working on right now.</span></div></li>
+          <li><span class="n">02</span><div><h3>[ Learning ]</h3><span class="by">Something you're exploring.</span></div></li>
+          <li><span class="n">03</span><div><h3>[ Interests ]</h3><span class="by">Topics you're drawn to.</span></div></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Cameron O'Neill</p>
+      <a href="index.html">Home ↑</a>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

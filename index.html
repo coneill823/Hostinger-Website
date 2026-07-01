@@ -3,106 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Site — Minimalist Template</title>
-  <meta name="description" content="A clean, minimalist starter website ready to be built out." />
-
-  <!-- Open Graph / social preview -->
-  <meta property="og:title" content="Your Site" />
-  <meta property="og:description" content="A clean, minimalist starter website." />
+  <title>Cameron O'Neill</title>
+  <meta name="description" content="Personal site of Cameron O'Neill — writing, projects, reading and media." />
+  <meta property="og:title" content="Cameron O'Neill" />
+  <meta property="og:description" content="Personal site — writing, projects, reading and media." />
   <meta property="og:type" content="website" />
-
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='42' fill='%23111'/></svg>" />
+  <meta property="og:url" content="https://thecamerononeill.com/" />
+  <link rel="icon" href="assets/logo.svg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Home">Your&nbsp;Site</a>
-
-      <nav class="nav" aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
-          <span class="sr-only">Menu</span>
-          <span class="nav-toggle-bar" aria-hidden="true"></span>
-        </button>
-        <ul id="nav-menu" class="nav-menu">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <div class="brandbar">
+      <div class="container brandbar-inner">
+        <a class="brand" href="index.html" aria-label="Home">
+          <img class="brand-logo" src="assets/logo.svg" alt="" />
+          <span class="brand-name">Cameron&nbsp;O'Neill</span>
+        </a>
+        <span class="brand-tag mono">thecamerononeill.com</span>
+      </div>
     </div>
+
+    <nav class="mainnav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span>Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+      </button>
+      <ul id="nav-menu" class="nav-grid">
+        <li><a href="about.html">About&nbsp;Me</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="projects.html">Personal&nbsp;Projects</a></li>
+        <li><a href="reading.html">Reading&nbsp;Recommendations</a></li>
+        <li><a href="media.html">Podcasting&nbsp;and&nbsp;Video&nbsp;Content</a></li>
+        <li><a href="contact.html">Contact&nbsp;Me</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section id="top" class="hero">
-      <div class="container">
-        <p class="eyebrow">Welcome</p>
-        <h1 class="hero-title">A clean start for your&nbsp;website.</h1>
-        <p class="hero-lead">
-          This is a minimalist template — fast, responsive, and easy to build on.
-          We'll shape it into your site step by step.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Get in touch</a>
-          <a class="btn btn-ghost" href="#about">Learn more</a>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <img class="hero-logo" src="assets/logo.svg" alt="Cameron O'Neill logo" />
+          <p class="eyebrow">Personal site · Est. 2026</p>
+          <!-- EDIT ME: your headline. Placeholder below. -->
+          <h1 class="hero-title">Cameron&nbsp;O'Neill</h1>
+          <p class="hero-lead">
+            [ Editable one-line intro — e.g. what you build, study, or write about.
+            Replace this sentence with your own headline. ]
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="about.html">About me →</a>
+            <a class="btn btn-ghost" href="projects.html">Projects</a>
+          </div>
         </div>
+
+        <figure class="hero-figure">
+          <!-- Drop your photo at assets/hero.jpg; the placeholder shows until then. -->
+          <img src="assets/hero.jpg"
+               onerror="this.onerror=null;this.src='assets/hero-placeholder.svg';"
+               alt="Cameron O'Neill" />
+          <figcaption>
+            <span>Fig. 01</span>
+            <span>thecamerononeill.com</span>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section">
+    <section class="section">
       <div class="container">
-        <h2 class="section-title">About</h2>
-        <p class="section-lead">
-          Replace this with a short paragraph about who you are or what your
-          project does. Keep it to a sentence or two — clarity beats length.
-        </p>
-      </div>
-    </section>
-
-    <!-- Services / Features -->
-    <section id="services" class="section section-alt">
-      <div class="container">
-        <h2 class="section-title">Services</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>First offering</h3>
-            <p>A short description of what you provide and why it matters.</p>
-          </article>
-          <article class="card">
-            <h3>Second offering</h3>
-            <p>Another concise value statement your visitors care about.</p>
-          </article>
-          <article class="card">
-            <h3>Third offering</h3>
-            <p>Round it out with a third point to keep the layout balanced.</p>
-          </article>
+        <div class="section-head">
+          <span class="idx mono">00</span>
+          <h2 class="section-title">Start here</h2>
         </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container narrow">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-lead">
-          The quickest way to reach us. Update the address below or wire this
-          form to your preferred handler.
-        </p>
-        <p class="contact-email">
-          <a href="mailto:hello@example.com">hello@example.com</a>
-        </p>
+        <div class="grid">
+          <a class="card" href="about.html" style="text-decoration:none;color:inherit">
+            <p class="meta">01 · Profile</p>
+            <h3>About Me</h3>
+            <p>Background, what I'm working on, and how to reach me.</p>
+          </a>
+          <a class="card" href="blog.html" style="text-decoration:none;color:inherit">
+            <p class="meta">02 · Writing</p>
+            <h3>Blog</h3>
+            <p>Notes, essays, and things I'm thinking through.</p>
+          </a>
+          <a class="card" href="projects.html" style="text-decoration:none;color:inherit">
+            <p class="meta">03 · Work</p>
+            <h3>Personal Projects</h3>
+            <p>Things I've built and experiments in progress.</p>
+          </a>
+          <a class="card" href="reading.html" style="text-decoration:none;color:inherit">
+            <p class="meta">04 · Library</p>
+            <h3>Reading Recommendations</h3>
+            <p>Books worth your time, with a line on why.</p>
+          </a>
+          <a class="card" href="media.html" style="text-decoration:none;color:inherit">
+            <p class="meta">05 · Media</p>
+            <h3>Podcasting &amp; Video</h3>
+            <p>Episodes, appearances, and video content.</p>
+          </a>
+          <a class="card" href="contact.html" style="text-decoration:none;color:inherit">
+            <p class="meta">06 · Contact</p>
+            <h3>Contact Me</h3>
+            <p>The best ways to get in touch.</p>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="year"></span> Your Site. All rights reserved.</p>
-      <a href="#top" class="back-to-top">Back to top ↑</a>
+      <p>© <span id="year"></span> Cameron O'Neill</p>
+      <a href="#top">Back to top ↑</a>
     </div>
   </footer>
 

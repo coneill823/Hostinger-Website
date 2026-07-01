@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Cameron O'Neill</title>
+  <meta name="description" content="Writing by Cameron O'Neill." />
+  <link rel="icon" href="assets/logo.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brandbar">
+      <div class="container brandbar-inner">
+        <a class="brand" href="index.html" aria-label="Home">
+          <img class="brand-logo" src="assets/logo.svg" alt="" />
+          <span class="brand-name">Cameron&nbsp;O'Neill</span>
+        </a>
+        <span class="brand-tag mono">thecamerononeill.com</span>
+      </div>
+    </div>
+    <nav class="mainnav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span>Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+      </button>
+      <ul id="nav-menu" class="nav-grid">
+        <li><a href="about.html">About&nbsp;Me</a></li>
+        <li><a href="blog.html" class="is-active" aria-current="page">Blog</a></li>
+        <li><a href="projects.html">Personal&nbsp;Projects</a></li>
+        <li><a href="reading.html">Reading&nbsp;Recommendations</a></li>
+        <li><a href="media.html">Podcasting&nbsp;and&nbsp;Video&nbsp;Content</a></li>
+        <li><a href="contact.html">Contact&nbsp;Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-index mono">02 / BLOG</p>
+        <h1 class="page-title">Blog</h1>
+        <p class="page-lead">Notes, essays, and things I'm thinking through.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <p class="note">No posts published yet — the first one is coming soon.</p>
+
+        <!-- TEMPLATE: copy this card for each new post. -->
+        <div class="grid" style="margin-top:1.5rem">
+          <article class="card">
+            <p class="meta"><span>DRAFT</span><span>YYYY-MM-DD</span></p>
+            <h3>[ Post title ]</h3>
+            <p>A one- or two-line summary of the post goes here.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Cameron O'Neill</p>
+      <a href="index.html">Home ↑</a>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

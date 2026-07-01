@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Placeholder logo">
+  <rect x="3" y="3" width="114" height="114" fill="none" stroke="#0a0b0d" stroke-width="3"/>
+  <!-- corner ticks -->
+  <path d="M3 22 V3 H22 M98 3 H117 V22 M117 98 V117 H98 M22 117 H3 V98" fill="none" stroke="#2b50e0" stroke-width="3"/>
+  <text x="60" y="60" text-anchor="middle" dominant-baseline="central"
+        font-family="ui-monospace, Menlo, Consolas, monospace" font-size="44" font-weight="700" fill="#0a0b0d" letter-spacing="2">CO</text>
+</svg>

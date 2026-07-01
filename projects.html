@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Projects — Cameron O'Neill</title>
+  <meta name="description" content="Projects by Cameron O'Neill." />
+  <link rel="icon" href="assets/logo.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brandbar">
+      <div class="container brandbar-inner">
+        <a class="brand" href="index.html" aria-label="Home">
+          <img class="brand-logo" src="assets/logo.svg" alt="" />
+          <span class="brand-name">Cameron&nbsp;O'Neill</span>
+        </a>
+        <span class="brand-tag mono">thecamerononeill.com</span>
+      </div>
+    </div>
+    <nav class="mainnav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span>Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+      </button>
+      <ul id="nav-menu" class="nav-grid">
+        <li><a href="about.html">About&nbsp;Me</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="projects.html" class="is-active" aria-current="page">Personal&nbsp;Projects</a></li>
+        <li><a href="reading.html">Reading&nbsp;Recommendations</a></li>
+        <li><a href="media.html">Podcasting&nbsp;and&nbsp;Video&nbsp;Content</a></li>
+        <li><a href="contact.html">Contact&nbsp;Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-index mono">03 / PERSONAL PROJECTS</p>
+        <h1 class="page-title">Personal Projects</h1>
+        <p class="page-lead">Things I've built and experiments in progress.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <!-- TEMPLATE: duplicate a card per project. -->
+        <div class="grid">
+          <article class="card">
+            <p class="meta"><span>2026</span><span>ACTIVE</span></p>
+            <h3>[ Project name ]</h3>
+            <p>What it is, the problem it solves, and the tools used.</p>
+          </article>
+          <article class="card">
+            <p class="meta"><span>2025</span><span>SHIPPED</span></p>
+            <h3>[ Project name ]</h3>
+            <p>A short description of a completed project.</p>
+          </article>
+          <article class="card">
+            <p class="meta"><span>—</span><span>IDEA</span></p>
+            <h3>[ Project name ]</h3>
+            <p>Something on the backlog you plan to build.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Cameron O'Neill</p>
+      <a href="index.html">Home ↑</a>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

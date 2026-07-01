@@ -1,51 +1,69 @@
-# Hostinger Website
+# thecamerononeill.com
 
-A clean, minimalist static website — the starting point for a site hosted on
-Hostinger. Built with plain HTML, CSS, and a touch of JavaScript so it loads
-fast and deploys anywhere with no build step.
+Personal website for Cameron O'Neill. A fast, no-build-step static site
+(plain HTML/CSS/JS) with a minimalist-corporate × engineer/scientist look:
+monospace labels, hairline grids, boxed navigation, and a single restrained
+technical-blue accent.
+
+## Pages
+
+| File            | Nav label                     |
+|-----------------|-------------------------------|
+| `index.html`    | Home (hero: logo + image)     |
+| `about.html`    | About Me                      |
+| `blog.html`     | Blog                          |
+| `projects.html` | Personal Projects             |
+| `reading.html`  | Reading Recommendations       |
+| `media.html`    | Podcasting and Video Content  |
+| `contact.html`  | Contact Me                    |
 
 ## Structure
 
 ```
 .
-├── index.html      # Page markup (hero, about, services, contact)
-├── css/
-│   └── styles.css  # All styling; design tokens live at the top (:root)
-├── js/
-│   └── main.js     # Mobile nav toggle + footer year
-└── README.md
+├── *.html            # one file per page (shared header/footer markup)
+├── css/styles.css    # all styling; design tokens live at the top (:root)
+├── js/main.js        # mobile nav toggle + footer year
+└── assets/
+    ├── logo.svg            # placeholder logo — replace with yours
+    ├── hero.jpg            # your hero photo (add this file)
+    └── hero-placeholder.svg # shown until hero.jpg exists
 ```
+
+## Add your logo and hero image
+
+The template ships with placeholders so nothing looks broken:
+
+- **Logo:** replace `assets/logo.svg` with your own logo (keep the filename
+  `logo.svg`, or if yours is a PNG, update the `src` in the HTML `<head>` and
+  header/hero to `assets/logo.png`).
+- **Hero photo:** drop your image in at `assets/hero.jpg`. It appears
+  automatically; the blueprint placeholder shows only until then.
+
+## Edit your content
+
+Placeholders are marked in the HTML with `[ ... ]` and `EDIT ME` /
+`TEMPLATE` comments:
+
+- **Headline:** `index.html` → `.hero-lead` (and `.hero-title` if you want
+  more than your name).
+- **Colors/spacing:** `css/styles.css` → the `:root` variables (`--accent`
+  changes the blue used throughout).
+- **Pages:** each page's `<section>` blocks; duplicate the card/list templates
+  to add posts, projects, books, or episodes.
 
 ## Preview locally
 
-No build tools required. Either open `index.html` directly in a browser, or
-serve it from the project root for cleaner paths:
+No tooling required — open `index.html`, or serve the folder:
 
 ```bash
-# Python 3
-python3 -m http.server 8000
-# then visit http://localhost:8000
+python3 -m http.server 8000   # → http://localhost:8000
 ```
 
 ## Deploy to Hostinger
 
-Because there's no build step, the repository files *are* the site. Two common
-ways to publish:
-
-1. **Git integration (recommended).** In hPanel go to
-   **Websites → Manage → Advanced → GIT**, connect this repository and branch,
-   and set the deploy path to your domain's `public_html`. Each push then
-   updates the live site (auto-deploy or a one-click "Deploy" button).
-2. **File Manager / FTP.** Upload the contents of this repo into
-   `public_html`.
-
-> Note: the site's files live at the repository root, so point Hostinger's
-> deploy path at the root (not a `dist/` or `public/` subfolder).
-
-## Customizing
-
-- **Colors & spacing:** edit the CSS variables under `:root` in `css/styles.css`.
-- **Content:** edit the sections in `index.html`.
-- **Site name:** replace "Your Site" in `index.html` (brand, title, footer).
-
-This is an intentionally small starting point — we'll build it out from here.
+The repo files *are* the site (no build). Publish via **hPanel → Websites →
+Manage → Advanced → GIT**: connect this repository and branch, set the deploy
+path to your domain's `public_html`, and each push updates the live site.
+(Alternatively, upload the repo contents into `public_html` via File Manager
+or FTP.) Point the deploy path at the repository **root**, not a subfolder.
