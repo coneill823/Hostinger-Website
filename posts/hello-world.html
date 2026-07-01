@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello, world — Cameron O'Neill</title>
+  <meta name="description" content="First post — what this blog will cover." />
+  <link rel="icon" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brandbar">
+      <div class="container brandbar-inner">
+        <a class="brand" href="../index.html" aria-label="Home">
+          <img class="brand-logo" src="../assets/logo.png" alt="" />
+          <span class="brand-name">Cameron&nbsp;O'Neill</span>
+        </a>
+        <span class="brand-tag mono">thecamerononeill.com</span>
+      </div>
+    </div>
+    <nav class="mainnav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span>Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+      </button>
+      <ul id="nav-menu" class="nav-grid">
+        <li><a href="../about.html">About&nbsp;Me</a></li>
+        <li><a href="../blog.html" class="is-active" aria-current="page">Blog</a></li>
+        <li><a href="../projects.html">Personal&nbsp;Projects</a></li>
+        <li><a href="../reading.html">Reading&nbsp;Recommendations</a></li>
+        <li><a href="../media.html">Podcasting&nbsp;and&nbsp;Video&nbsp;Content</a></li>
+        <li><a href="../contact.html">Contact&nbsp;Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="page-index mono"><a class="backlink" href="../blog.html">← Blog</a></p>
+        <h1 class="page-title">Hello, world</h1>
+        <p class="post-meta mono">2026-07-01 · Meta</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="container narrow post prose">
+        <p>Welcome to the blog. This is a sample post to show how everything
+          fits together — you can edit it or delete it and start fresh.</p>
+
+        <h2>What I'll write about</h2>
+        <p>Biomedical engineering, projects I'm building, things I'm reading,
+          and the occasional deep-dive into a problem I've been chewing on.</p>
+
+        <figure>
+          <img src="../assets/hero-placeholder.svg" alt="Placeholder graphic" />
+          <figcaption>Images live in <code>assets/blog/</code> and are added with a
+            <code>../</code> path.</figcaption>
+        </figure>
+
+        <p>To publish your own, copy <code>posts/_template.html</code>, write your
+          content, and add an entry to <code>data/posts.js</code>. That's it.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Cameron O'Neill</p>
+      <a href="../blog.html">Back to blog ↑</a>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

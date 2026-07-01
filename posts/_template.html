@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- EDIT: title + description for this post -->
+  <title>Post title — Cameron O'Neill</title>
+  <meta name="description" content="Short description of this post." />
+  <link rel="icon" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brandbar">
+      <div class="container brandbar-inner">
+        <a class="brand" href="../index.html" aria-label="Home">
+          <img class="brand-logo" src="../assets/logo.png" alt="" />
+          <span class="brand-name">Cameron&nbsp;O'Neill</span>
+        </a>
+        <span class="brand-tag mono">thecamerononeill.com</span>
+      </div>
+    </div>
+    <nav class="mainnav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span>Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+      </button>
+      <ul id="nav-menu" class="nav-grid">
+        <li><a href="../about.html">About&nbsp;Me</a></li>
+        <li><a href="../blog.html" class="is-active" aria-current="page">Blog</a></li>
+        <li><a href="../projects.html">Personal&nbsp;Projects</a></li>
+        <li><a href="../reading.html">Reading&nbsp;Recommendations</a></li>
+        <li><a href="../media.html">Podcasting&nbsp;and&nbsp;Video&nbsp;Content</a></li>
+        <li><a href="../contact.html">Contact&nbsp;Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="page-index mono"><a class="backlink" href="../blog.html">← Blog</a></p>
+        <!-- EDIT: post title + date -->
+        <h1 class="page-title">Post title</h1>
+        <p class="post-meta mono">2026-01-01</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="container narrow post prose">
+        <!-- EDIT: write your post below. Examples of what you can use: -->
+        <p>Opening paragraph. Write in plain HTML paragraphs like this.</p>
+
+        <h2>A subheading</h2>
+        <p>More text. To add an image, drop the file in <code>assets/blog/</code>
+          and reference it with a <code>../</code> path, like the figure below.</p>
+
+        <figure>
+          <img src="../assets/blog/your-image.jpg" alt="Describe the image" />
+          <figcaption>A caption for the image.</figcaption>
+        </figure>
+
+        <p>Closing thoughts.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Cameron O'Neill</p>
+      <a href="../blog.html">Back to blog ↑</a>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>

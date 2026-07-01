@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog — Cameron O'Neill</title>
   <meta name="description" content="Writing by Cameron O'Neill." />
-  <link rel="icon" href="assets/logo.svg" />
+  <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -15,7 +15,7 @@
     <div class="brandbar">
       <div class="container brandbar-inner">
         <a class="brand" href="index.html" aria-label="Home">
-          <img class="brand-logo" src="assets/logo.svg" alt="" />
+          <img class="brand-logo" src="assets/logo.png" alt="" />
           <span class="brand-name">Cameron&nbsp;O'Neill</span>
         </a>
         <span class="brand-tag mono">thecamerononeill.com</span>
@@ -48,16 +48,8 @@
 
     <section class="section">
       <div class="container">
-        <p class="note">No posts published yet — the first one is coming soon.</p>
-
-        <!-- TEMPLATE: copy this card for each new post. -->
-        <div class="grid" style="margin-top:1.5rem">
-          <article class="card">
-            <p class="meta"><span>DRAFT</span><span>YYYY-MM-DD</span></p>
-            <h3>[ Post title ]</h3>
-            <p>A one- or two-line summary of the post goes here.</p>
-          </article>
-        </div>
+        <!-- Posts render here from data/posts.js -->
+        <div id="posts-list" class="grid"></div>
       </div>
     </section>
   </main>
@@ -69,5 +61,7 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script src="data/posts.js"></script>
+  <script src="js/content.js"></script>
 </body>
 </html>
