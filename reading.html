@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reading Recommendations — Cameron O'Neill</title>
   <meta name="description" content="Books recommended by Cameron O'Neill." />
-  <link rel="icon" href="assets/logo.svg" />
+  <link rel="icon" href="assets/logo.png" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -15,7 +15,7 @@
     <div class="brandbar">
       <div class="container brandbar-inner">
         <a class="brand" href="index.html" aria-label="Home">
-          <img class="brand-logo" src="assets/logo.svg" alt="" />
+          <img class="brand-logo" src="assets/logo.png" alt="" />
           <span class="brand-name">Cameron&nbsp;O'Neill</span>
         </a>
         <span class="brand-tag mono">thecamerononeill.com</span>
@@ -42,27 +42,29 @@
       <div class="container">
         <p class="page-index mono">04 / READING RECOMMENDATIONS</p>
         <h1 class="page-title">Reading Recommendations</h1>
-        <p class="page-lead">Books worth your time, with a line on why.</p>
+        <p class="page-lead">Books and papers worth your time, with a line on why.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container narrow">
-        <!-- TEMPLATE: add an <li> per book. -->
-        <ol class="numbered">
-          <li>
-            <span class="n">01</span>
-            <div><h3>[ Book title ]</h3><span class="by">Author · why it's worth reading.</span></div>
-          </li>
-          <li>
-            <span class="n">02</span>
-            <div><h3>[ Book title ]</h3><span class="by">Author · a one-line note.</span></div>
-          </li>
-          <li>
-            <span class="n">03</span>
-            <div><h3>[ Book title ]</h3><span class="by">Author · a one-line note.</span></div>
-          </li>
-        </ol>
+      <div class="container">
+        <div class="section-head">
+          <span class="idx mono">//</span>
+          <h2 class="section-title">Books</h2>
+        </div>
+        <!-- Renders from data/books.js -->
+        <div id="books-list" class="grid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="idx mono">//</span>
+          <h2 class="section-title">Papers</h2>
+        </div>
+        <!-- Renders from data/papers.js -->
+        <div id="papers-list" class="grid"></div>
       </div>
     </section>
   </main>
@@ -74,5 +76,8 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script src="data/books.js"></script>
+  <script src="data/papers.js"></script>
+  <script src="js/content.js"></script>
 </body>
 </html>
