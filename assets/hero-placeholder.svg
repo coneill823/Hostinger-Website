@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Image placeholder">
-  <rect width="1200" height="900" fill="#f4f5f3"/>
+  <rect width="1200" height="900" fill="#101a2e"/>
   <!-- blueprint grid -->
-  <g stroke="#d8dad4" stroke-width="1">
+  <g stroke="rgba(140,175,225,0.14)" stroke-width="1">
     <path d="M0 60 H1200 M0 120 H1200 M0 180 H1200 M0 240 H1200 M0 300 H1200 M0 360 H1200 M0 420 H1200 M0 480 H1200 M0 540 H1200 M0 600 H1200 M0 660 H1200 M0 720 H1200 M0 780 H1200 M0 840 H1200"/>
     <path d="M60 0 V900 M120 0 V900 M180 0 V900 M240 0 V900 M300 0 V900 M360 0 V900 M420 0 V900 M480 0 V900 M540 0 V900 M600 0 V900 M660 0 V900 M720 0 V900 M780 0 V900 M840 0 V900 M900 0 V900 M960 0 V900 M1020 0 V900 M1080 0 V900 M1140 0 V900"/>
   </g>
   <!-- centre crosshair -->
-  <g stroke="#2b50e0" stroke-width="2">
+  <g stroke="#6db8ff" stroke-width="2">
     <path d="M600 400 V500 M550 450 H650"/>
     <circle cx="600" cy="450" r="46" fill="none"/>
   </g>
   <text x="600" y="560" text-anchor="middle"
-        font-family="ui-monospace, Menlo, Consolas, monospace" font-size="26" fill="#6b7078" letter-spacing="6">[ IMAGE PLACEHOLDER ]</text>
+        font-family="ui-monospace, Menlo, Consolas, monospace" font-size="26" fill="#7e8fac" letter-spacing="6">[ IMAGE PLACEHOLDER ]</text>
   <text x="600" y="596" text-anchor="middle"
-        font-family="ui-monospace, Menlo, Consolas, monospace" font-size="16" fill="#9aa0a6" letter-spacing="3">DROP assets/hero.jpg TO REPLACE</text>
+        font-family="ui-monospace, Menlo, Consolas, monospace" font-size="16" fill="#56668a" letter-spacing="3">DROP assets/hero.jpg TO REPLACE</text>
 </svg>
