@@ -278,16 +278,17 @@ body.nav-open { overflow: hidden; }
   * { transition: none !important; }
 }
 
-/* ---------- Blog post cards ---------- */
+/* ---------- Cards that link to a detail page ---------- */
+a.card { display: block; color: inherit; text-decoration: none; }
 .post-card { padding: 0; overflow: hidden; }
 .post-card .post-cover { display: block; }
 .post-card .post-cover img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; }
-.post-card .post-body { padding: 1.15rem 1.25rem 1.25rem; }
-.post-card h3 a { color: inherit; text-decoration: none; }
-.post-card h3 a:hover { color: var(--accent-2); }
-.readmore { margin-top: 0.8rem !important; }
-.readmore a { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; color: var(--accent-2); text-decoration: none; }
-.readmore a:hover { text-decoration: underline; }
+.post-card .post-body { display: block; padding: 1.15rem 1.25rem 1.25rem; }
+.readmore {
+  margin-top: 0.8rem !important;
+  font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; color: var(--accent-2);
+}
+a.card:hover .readmore { text-decoration: underline; }
 .tag {
   font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--accent);
@@ -310,3 +311,26 @@ body.nav-open { overflow: hidden; }
 .post-meta { margin: 0; }
 .backlink { text-decoration: none; }
 .backlink:hover { color: var(--accent-2); }
+
+/* ---------- Image placement inside posts / detail pages ----------
+   Add a class to <figure> to control where an image sits:
+     (none)  full content width (default)
+     .center centered, natural width
+     .small  narrow (max 340px), centered
+     .left   float left, text wraps to the right
+     .right  float right, text wraps to the left
+   Use <div class="img-row"> with two <figure>s for side-by-side.
+   Put <p class="clear"></p> after floats if the next block overlaps. */
+.post figure.center { text-align: center; }
+.post figure.center img { display: inline-block; width: auto; max-width: 100%; }
+.post figure.small { max-width: 340px; margin-inline: auto; }
+.post figure.left, .post figure.right { max-width: 46%; margin-block: 0.4rem 1rem; }
+.post figure.left  { float: left;  margin-right: 1.5rem; }
+.post figure.right { float: right; margin-left: 1.5rem; }
+.post .clear { clear: both; margin: 0; }
+.post .img-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 2rem 0; }
+.post .img-row figure { margin: 0; }
+@media (max-width: 640px) {
+  .post figure.left, .post figure.right { float: none; max-width: 100%; margin-inline: 0; }
+  .post .img-row { grid-template-columns: 1fr; }
+}

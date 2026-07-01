@@ -1,6 +1,7 @@
-// Renders blog posts, books, and papers from the data/*.js files.
-// Content is added by editing those files and pushing — there is no
-// public submission path, so only the repository owner can add entries.
+// Renders blog posts, projects, books, and papers from the data/*.js files.
+// Content is added by editing those files (and, for detail pages, copying a
+// template in the matching folder) and pushing — there is no public submission
+// path, so only the repository owner can add entries.
 (function () {
   "use strict";
 
@@ -10,8 +11,24 @@
     });
   }
   function note(t) { return '<p class="note">' + esc(t) + "</p>"; }
-  function linked(title, url) {
-    return url ? '<a href="' + esc(url) + '" rel="noopener">' + esc(title) + "</a>" : esc(title);
+
+  // A card that becomes a link when `url` (an internal detail page) is set.
+  function cardOpen(url, extraClass) {
+    var cls = "card" + (extraClass ? " " + extraClass : "");
+    return url
+      ? '<a class="' + cls + '" href="' + esc(url) + '">'
+      : '<article class="' + cls + '">';
+  }
+  function cardClose(url) { return url ? "</a>" : "</article>"; }
+
+  function metaLine(parts) {
+    parts = parts.filter(Boolean).map(esc);
+    return parts.length ? '<p class="meta">' + parts.map(function (p) {
+      return "<span>" + p + "</span>";
+    }).join("") + "</p>" : "";
+  }
+  function readMore(url, label) {
+    return url ? '<p class="readmore">' + esc(label || "Read") + " →</p>" : "";
   }
 
   /* ---------- Blog posts ---------- */
@@ -23,54 +40,66 @@
     });
     if (!posts.length) { el.innerHTML = note("No posts yet — check back soon."); return; }
     el.innerHTML = posts.map(function (p) {
-      var url = p.url || "#";
+      var url = p.url || "";
       var cover = p.cover
-        ? '<a class="post-cover" href="' + esc(url) + '"><img src="' + esc(p.cover) + '" alt="" loading="lazy"></a>'
+        ? '<span class="post-cover"><img src="' + esc(p.cover) + '" alt="" loading="lazy"></span>'
         : "";
       var tags = (p.tags || []).map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("");
-      return '<article class="card post-card">' + cover +
-        '<div class="post-body">' +
+      return cardOpen(url, "post-card") + cover +
+        '<span class="post-body">' +
           '<p class="meta"><span>' + esc(p.date || "") + "</span>" + tags + "</p>" +
-          "<h3>" + linked(p.title || "Untitled", url) + "</h3>" +
+          "<h3>" + esc(p.title || "Untitled") + "</h3>" +
           "<p>" + esc(p.excerpt || "") + "</p>" +
-          (p.url ? '<p class="readmore"><a href="' + esc(url) + '">Read →</a></p>' : "") +
-        "</div></article>";
+          readMore(url) +
+        "</span>" + cardClose(url);
     }).join("");
   }
 
-  /* ---------- Books ---------- */
-  function renderBooks() {
-    var el = document.getElementById("books-list");
+  /* ---------- Personal projects ---------- */
+  function renderProjects() {
+    var el = document.getElementById("projects-list");
     if (!el) return;
-    var books = window.BOOKS || [];
-    if (!books.length) { el.innerHTML = note("No books listed yet."); return; }
-    el.innerHTML = books.map(function (b) {
-      var meta = [b.author, b.year].filter(Boolean).map(esc).join(" · ");
-      return '<article class="card">' +
-        (meta ? '<p class="meta"><span>' + meta + "</span></p>" : "") +
-        "<h3>" + linked(b.title || "Untitled", b.link) + "</h3>" +
-        (b.note ? "<p>" + esc(b.note) + "</p>" : "") +
-      "</article>";
+    var items = window.PROJECTS || [];
+    if (!items.length) { el.innerHTML = note("No projects listed yet."); return; }
+    el.innerHTML = items.map(function (p) {
+      var url = p.url || "";
+      var cover = p.cover
+        ? '<span class="post-cover"><img src="' + esc(p.cover) + '" alt="" loading="lazy"></span>'
+        : "";
+      return cardOpen(url, p.cover ? "post-card" : "") +
+        (p.cover ? cover + '<span class="post-body">' : "") +
+        metaLine(p.meta || []) +
+        "<h3>" + esc(p.title || "Untitled") + "</h3>" +
+        (p.excerpt ? "<p>" + esc(p.excerpt) + "</p>" : "") +
+        readMore(url, "View project") +
+        (p.cover ? "</span>" : "") +
+      cardClose(url);
     }).join("");
   }
 
-  /* ---------- Papers ---------- */
-  function renderPapers() {
-    var el = document.getElementById("papers-list");
+  /* ---------- Books & papers (shared) ---------- */
+  function renderRefs(elId, list, metaKeys) {
+    var el = document.getElementById(elId);
     if (!el) return;
-    var papers = window.PAPERS || [];
-    if (!papers.length) { el.innerHTML = note("No papers listed yet."); return; }
-    el.innerHTML = papers.map(function (p) {
-      var meta = [p.authors, p.venue].filter(Boolean).map(esc).join(" · ");
-      return '<article class="card">' +
-        (meta ? '<p class="meta"><span>' + meta + "</span></p>" : "") +
-        "<h3>" + linked(p.title || "Untitled", p.link) + "</h3>" +
-        (p.note ? "<p>" + esc(p.note) + "</p>" : "") +
-      "</article>";
+    if (!list || !list.length) { el.innerHTML = note("Nothing listed yet."); return; }
+    el.innerHTML = list.map(function (r) {
+      var url = r.url || "";
+      var meta = metaLine(metaKeys.map(function (k) { return r[k]; }));
+      return cardOpen(url) +
+        meta +
+        "<h3>" + esc(r.title || "Untitled") + "</h3>" +
+        (r.note ? "<p>" + esc(r.note) + "</p>" : "") +
+        readMore(url, "Read more") +
+      cardClose(url);
     }).join("");
   }
 
-  function run() { renderPosts(); renderBooks(); renderPapers(); }
+  function run() {
+    renderPosts();
+    renderProjects();
+    renderRefs("books-list", window.BOOKS, ["author", "year"]);
+    renderRefs("papers-list", window.PAPERS, ["authors", "venue"]);
+  }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", run);
   } else { run(); }
