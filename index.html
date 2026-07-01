@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cameron O'Neill</title>
+  <meta name="description" content="Personal site of Cameron O'Neill — writing, projects, reading and media." />
+  <meta property="og:title" content="Cameron O'Neill" />
+  <meta property="og:description" content="Personal site — writing, projects, reading and media." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://thecamerononeill.com/" />
+  <link rel="icon" href="assets/logo.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="brandbar">
+      <div class="container brandbar-inner">
+        <a class="brand" href="index.html" aria-label="Home">
+          <img class="brand-logo" src="assets/logo.svg" alt="" />
+          <span class="brand-name">Cameron&nbsp;O'Neill</span>
+        </a>
+        <span class="brand-tag mono">thecamerononeill.com</span>
+      </div>
+    </div>
+
+    <nav class="mainnav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+        <span>Menu</span>
+        <span class="nav-toggle-icon" aria-hidden="true"><span></span></span>
+      </button>
+      <ul id="nav-menu" class="nav-grid">
+        <li><a href="about.html">About&nbsp;Me</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="projects.html">Personal&nbsp;Projects</a></li>
+        <li><a href="reading.html">Reading&nbsp;Recommendations</a></li>
+        <li><a href="media.html">Podcasting&nbsp;and&nbsp;Video&nbsp;Content</a></li>
+        <li><a href="contact.html">Contact&nbsp;Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <img class="hero-logo" src="assets/logo.svg" alt="Cameron O'Neill logo" />
+          <p class="eyebrow">Biomedical Engineer · Glasgow</p>
+          <h1 class="hero-title">Cameron&nbsp;O'Neill</h1>
+          <p class="hero-lead">
+            Biomedical engineer (BEng, University of Glasgow) working at the
+            intersection of engineering and patient care — from prosthetics and
+            rehabilitation to biosensors and antibody engineering.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="about.html">About me →</a>
+            <a class="btn btn-ghost" href="projects.html">Projects</a>
+          </div>
+        </div>
+
+        <figure class="hero-figure">
+          <!-- Drop your photo at assets/hero.jpg; the placeholder shows until then. -->
+          <img src="assets/hero.jpg"
+               onerror="this.onerror=null;this.src='assets/hero-placeholder.svg';"
+               alt="Cameron O'Neill" />
+          <figcaption>
+            <span>Fig. 01</span>
+            <span>thecamerononeill.com</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="idx mono">00</span>
+          <h2 class="section-title">Start here</h2>
+        </div>
+        <div class="grid">
+          <a class="card" href="about.html" style="text-decoration:none;color:inherit">
+            <p class="meta">01 · Profile</p>
+            <h3>About Me</h3>
+            <p>Background, what I'm working on, and how to reach me.</p>
+          </a>
+          <a class="card" href="blog.html" style="text-decoration:none;color:inherit">
+            <p class="meta">02 · Writing</p>
+            <h3>Blog</h3>
+            <p>Notes, essays, and things I'm thinking through.</p>
+          </a>
+          <a class="card" href="projects.html" style="text-decoration:none;color:inherit">
+            <p class="meta">03 · Work</p>
+            <h3>Personal Projects</h3>
+            <p>Things I've built and experiments in progress.</p>
+          </a>
+          <a class="card" href="reading.html" style="text-decoration:none;color:inherit">
+            <p class="meta">04 · Library</p>
+            <h3>Reading Recommendations</h3>
+            <p>Books worth your time, with a line on why.</p>
+          </a>
+          <a class="card" href="media.html" style="text-decoration:none;color:inherit">
+            <p class="meta">05 · Media</p>
+            <h3>Podcasting &amp; Video</h3>
+            <p>Episodes, appearances, and video content.</p>
+          </a>
+          <a class="card" href="contact.html" style="text-decoration:none;color:inherit">
+            <p class="meta">06 · Contact</p>
+            <h3>Contact Me</h3>
+            <p>The best ways to get in touch.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Cameron O'Neill</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
